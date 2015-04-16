@@ -1,60 +1,109 @@
 package yt5ny.cs2110.virginia.edu.myapplication;
 
-import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 /**
- * This file displays the splash screen activity and then starts the next activity which
- * (in this simple example) displays "Hello world!" (MainActivity)
+ * Created by Student on 4/11/2015.
  */
-public class menu extends Activity {
+public class menu extends ActionBarActivity {
 
 
-    private static String TAG = menu.class.getName(); // Used to report an error in run()
-    private static long SLEEP_TIME = 3;    // Set the duration of the splash screen
-
+    private Button button1;
+    private Button button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // To create a minimal appearance, remove the title bar
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        // ... and remove the notification bar if it exists
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.menu);
+                   button1 = (Button) findViewById(R.id.button1);
+            button1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-        setContentView(R.layout.menu); // Refers to the splash.xml file in the layout directory
+                    startActivity(new Intent(menu.this, instruction.class));
+                }});
+                button2 = (Button) findViewById(R.id.button2);
+                button2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-        // Start timer and launch main activity
-        IntentLauncher launcher = new IntentLauncher();
-        launcher.start();
+                        startActivity(new Intent(menu.this, MainActivity.class));
+                    }
+
+
+                    ;
+
+
+        });
     }
 
-    private class IntentLauncher extends Thread {
-        @Override
-        /**
-         * Sleep for some time and then start new activity
-         */
-        public void run() {
-            try {
-                // Sleeping - displays the splash screen for this long before switching activities
-                Thread.sleep(SLEEP_TIME*300); // Display (sleep)
-            } catch (Exception e) {
-                Log.e(TAG, e.getMessage());
-            }
 
-            // Start main activity
-            // Create an Intent in SplashActivity to start the MainActivity
-            Intent intent = new Intent(menu.this, main.class);
-            menu.this.startActivity(intent);
-            menu.this.finish();
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.i("GeoQuiz", "calling onStart()");
+    }
+
+    @Override
+    public void onRestart() {
+        super.onRestart();
+        Log.i("GeoQuiz", "calling onRestart()");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.i("GeoQuiz", "calling onResume()");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.i("GeoQuiz", "calling onPause()");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.i("GeoQuiz", "calling onDestroy()");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.i("GeoQuiz", "calling onStop()");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
         }
+
+        return super.onOptionsItemSelected(item);
     }
-
-
 }
+
+
+

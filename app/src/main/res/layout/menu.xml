@@ -1,48 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@mipmap/images3">
-    <EditText
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".main"
+    android:background="@drawable/image1"
+    android:id="@+id/text1">
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Instruction"
+        android:id="@+id/button1"
+        android:onClick="startDb"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/button2"
+        android:onClick="button1Click"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Ghost Hunter"
-        android:id="@+id/splashScreenText1"
-        android:layout_marginTop="56dp"
-        android:textStyle="bold"
-        android:textSize="28dp"
-        android:typeface="monospace"
-        android:textColor="#fff0fd"
-
-
+        android:text="MENU"
+        android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:gravity="center"
-        android:text="University of Virginia\nCS2110\nSpring 2015\n2Inspired2BeTired"
-        android:id="@+id/splashScreenText2"
-        android:textColor="#fff0fd"
-
-        android:layout_below="@+id/splashScreenText1"
-        android:layout_centerHorizontal="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:gravity="left"
-        android:text="\n\nMembers: Michelle Wong  Amy Zhao\n                   Yining Tao      Jonathan Li\nTA:             Iordan Trenkov"
-        android:id="@+id/splashScreenText3"
-        android:textColor="#ec0f0f"
-        android:layout_marginBottom="79dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-
 </RelativeLayout>
-
-
-
