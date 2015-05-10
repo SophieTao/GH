@@ -1,1 +1,2 @@
 My Application
+<option name="APK_PATH" value="/build/apk/your_app_name-debug-unaligned.apk" />
