@@ -13,19 +13,28 @@ import android.widget.Button;
  * Created by Student on 3/30/2015.
  */
 public class instruction extends Activity {
-    private Button button3;
+//    private Button button3;
+    private Button button4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.instruction);
-        button3 = (Button) findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
+//        button3 = (Button) findViewById(R.id.button3);
+//        button3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                startActivity(new Intent(instruction.this, MainActivity.class));};
+//
+//        });
+        button4 = (Button) findViewById(R.id.button);
+        button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(instruction.this, MainActivity.class));};
+                startActivity(new Intent(instruction.this, menu.class));};
 
         });}
     @Override

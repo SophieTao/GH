@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
-
+    <string name="danger">Watch out!</string>
+    <string name="special">Get Bonus</string>
+    <string name="user_name">Enter Username: </string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>

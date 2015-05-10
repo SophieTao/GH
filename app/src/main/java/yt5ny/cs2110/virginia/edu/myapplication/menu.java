@@ -9,13 +9,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 /**
  * Created by Student on 4/11/2015.
  */
 public class menu extends ActionBarActivity {
 
+//    Button easy,medium,hard;
+    int level;
 
+    public menu(){
+        level = 1;
+    }
+    RelativeLayout menu;
     private Button button1;
     private Button button2;
     @Override
@@ -23,6 +30,10 @@ public class menu extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.menu);
+        menu = (RelativeLayout)findViewById(R.id.menu);
+//        easy = (Button)findViewById(R.id.easy);
+//        medium = (Button)findViewById(R.id.medium);
+//        hard = (Button)findViewById(R.id.hard);
                    button1 = (Button) findViewById(R.id.button1);
             button1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -35,7 +46,7 @@ public class menu extends ActionBarActivity {
                     @Override
                     public void onClick(View v) {
 
-                        startActivity(new Intent(menu.this, MainActivity.class));
+                        startActivity(new Intent(menu.this, UserPromptActivity.class));
                     }
 
 
@@ -43,6 +54,43 @@ public class menu extends ActionBarActivity {
 
 
         });
+//        easy.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Intent myIntent = new Intent(menu.this, MainActivity.class);
+//                myIntent.putExtra("level",1);
+//                startActivity(myIntent);
+//
+//
+//            }
+//        });
+//
+//        medium.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Intent myIntent = new Intent(menu.this, MainActivity.class);
+//                myIntent.putExtra("level",2);
+//                startActivity(myIntent);
+//
+//
+//
+//
+//            }
+//        });
+//
+//        hard.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Intent myIntent = new Intent(menu.this, MainActivity.class);
+//                myIntent.putExtra("level",3);
+//                startActivity(myIntent);
+//
+//
+//            }
+//        });
     }
 
 

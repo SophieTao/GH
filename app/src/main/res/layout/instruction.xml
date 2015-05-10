@@ -25,28 +25,39 @@
         android:layout_marginTop="36dp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Here are some facts to help you start with this game!"
+        android:text="Here are some facts to help you start with this game!Ghost Hunter: Ash Ketchum and Gengar This is a game where you play Ash Ketchum. You have to catch all the attacking ghosts, which will be the Pokémon Gengar and prevent him from killing you. You start out with 10 poke balls in easy, medium, and hard, with the only difference between the three levels being the speed at which the Gengars follow you: As the level increases in difficulty, the Gengars will follow you faster. Use your finger to dodge the Genegars and tap on top of the Gengars to capture it. There are hidden features throughout the game: For example, you can get more poke balls with the coins you get. Find out all the hidden features and kill as many Gengars as you can! "
         android:id="@+id/textView23"
         android:layout_below="@+id/textView22"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp" />
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Play"-->
+        <!--android:id="@+id/button3"-->
+        <!--android:nestedScrollingEnabled="false"-->
+        <!--android:onClick="sendMessage2"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_toRightOf="@+id/textView22"-->
+        <!--android:layout_toEndOf="@+id/textView22" />-->
 
     <Button
-        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
-        android:id="@+id/button3"
-        android:nestedScrollingEnabled="false"
-        android:onClick="sendMessage2"
+        android:text="Back"
+        android:id="@+id/button"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/textView22"
-        android:layout_toEndOf="@+id/textView22" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textView21"
+        android:layout_toStartOf="@+id/textView21" />
 </RelativeLayout>
 
 
