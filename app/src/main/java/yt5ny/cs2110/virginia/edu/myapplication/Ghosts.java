@@ -76,7 +76,7 @@ public class Ghosts extends AsyncTask<ImageView, ImageView, Void> {
                         break;
                     }
                 }
-
+ //
                 if (tickscore == 100){
                     score++;
                     if (boy.getHp()<100)
